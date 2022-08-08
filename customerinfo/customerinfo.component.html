@@ -1,0 +1,35 @@
+<form [formGroup]="viewCustForm">
+<p class="para">Get Customer Information</p>
+<input type="text" id="acctid" placeholder="Enter Account_Id"  formControlName="acctid"/><br><br><br>
+<div class="alert alert-danger" *ngIf="  viewCustForm.controls['acctid'].errors?.['required'] &&
+            viewCustForm.controls['acctid'].touched">ID is required.</div>
+
+<input type="button"  id="submit" (click)="onCustInfo()" value="View Customer Info"/><br><br><br>
+<table class="table table-striped  text-center" cellspacing="4" rules="all" border="4" id="myTable"
+        style="border-collapse: collapse; text-align: center; margin-left: auto; margin-right: auto; background-color:black;">
+        <thead>
+          <tr>
+            <th scope="col" style="color: white;">Account Id</th>
+            <th scope="col" style="color: white;">Customer Name</th>
+			<th scope="col" style="color: white;">Phone Number</th>
+			<th scope="col" style="color: white;">Password</th>
+            <th scope="col" style="color: white;">Occupation</th>
+			<th scope="col" style="color: white;">City</th>	
+			<th scope="col" style="color: white;">State</th>	
+			<th scope="col" style="color: white;">Country</th>				
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+			<td style="color: white;">{{acctid}}</td>
+			<td style="color: white;">{{custname}}</td>
+			<td style="color: white;">{{phoneno}}</td>	
+			<td style="color: white;">{{password}}</td>
+			<td style="color: white;">{{occupation}}</td>
+			<td style="color: white;">{{city}}</td>
+			<td style="color: white;">{{country}}</td>
+			<td style="color: white;">{{state}}</td>				
+          </tr>
+        </tbody>
+      </table>
+</form>

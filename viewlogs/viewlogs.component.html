@@ -1,0 +1,25 @@
+<br><br>
+<form >
+<input type="button" class="buttoncenter" id="submit" (click)="onList()" value="Click Here To View All Logs"/><br><br><br>
+<table class="table table-striped  text-center" cellspacing="4" rules="all" border="4" id="myTable"
+        style="border-collapse: collapse; text-align: center; margin-left: auto; margin-right: auto; background-color:black;">
+        <thead>
+          <tr>
+            <th scope="col" style="color: white;">Account Id</th>
+            <th scope="col" style="color: white;">Final Balance</th>
+			<th scope="col" style="color: white;">Initial Balance</th>
+			<th scope="col" style="color: white;">Transaction Status</th>
+            <th scope="col" style="color: white;">Transaction Type</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr *ngFor="let row of rows">
+			<td style="color: white;">{{row.acctid}}</td>
+			<td style="color: white;">{{row.finalbal}}</td>
+			<td style="color: white;">{{row.initbal}}</td>
+			<td style="color: white;">{{row.transacstatus}}</td>
+			<td style="color: white;">{{row.transactype}}</td>
+          </tr>
+        </tbody>
+      </table>
+</form>

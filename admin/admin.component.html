@@ -1,0 +1,10 @@
+<form [formGroup]="userForm">
+<p class="para">Admin Login</p>
+<input type="text" id="id" placeholder="Enter user name"  formControlName="username"/><br><br>
+<div class="alert alert-danger" *ngIf="  userForm.controls['username'].errors?.['required'] &&
+            userForm.controls['username'].touched">Username is required.</div>
+<input type="password" id="phone" placeholder="Enter password"  formControlName="pass"/><br><br>
+<div class="alert alert-danger" *ngIf="  userForm.controls['pass'].errors?.['required'] &&
+            userForm.controls['pass'].touched">Password is required.</div>
+<input type="button"  id="submit" (click)="onAdminLogin()" value="Login"/>
+</form>

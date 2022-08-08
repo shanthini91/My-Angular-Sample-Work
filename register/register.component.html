@@ -1,0 +1,52 @@
+<form [formGroup]="userForm" (ngSubmit)="onRegister()">
+<p class="para">Registration Page</p>
+<input type="text" id="custname" placeholder="Enter Your Name"  formControlName="custname"/><br><br>
+ <div class="alert alert-danger" *ngIf="  userForm.controls['custname'].errors?.['required'] &&
+            userForm.controls['custname'].touched
+          ">
+          Name is required.
+        </div>
+<input type="text" id="phoneno" placeholder="Enter Phone"  formControlName="phoneno"/><br><br>
+ <div class="alert alert-danger" *ngIf="  userForm.controls['phoneno'].errors?.['required'] &&
+                userForm.controls['phoneno'].touched
+              ">
+              Phone Number is required.
+            </div>
+<input type="text" id="occupation" placeholder="Enter Occupation"  formControlName="occupation"/><br><br>
+  <div class="alert alert-danger" *ngIf="  userForm.controls['occupation'].errors?.['required'] &&
+                userForm.controls['occupation'].touched
+              " onfocus="">
+              Occupation is required.
+            </div>
+			<input type="text" id="city" placeholder="Enter City"  formControlName="city"/><br><br>
+  <div class="alert alert-danger" *ngIf="  userForm.controls['city'].errors?.['required'] &&
+                userForm.controls['city'].touched
+              " onfocus="">
+              City is required.
+            </div>
+			<input type="text" id="state" placeholder="Enter State"  formControlName="state"/><br><br>
+  <div class="alert alert-danger" *ngIf="  userForm.controls['state'].errors?.['required'] &&
+                userForm.controls['state'].touched
+              " onfocus="">
+              State is required.
+            </div>
+<input type="text" id="country" placeholder="Enter Country"  formControlName="country"/><br><br>
+  <div class="alert alert-danger" *ngIf="  userForm.controls['country'].errors?.['required'] &&
+                userForm.controls['country'].touched
+              " onfocus="">
+              Country is required.
+            </div>
+			<input type="password" id="password" placeholder="Enter Password"  formControlName="password"/><br><br>
+  <div class="alert alert-danger" *ngIf="  userForm.controls['password'].errors?.['required'] &&
+                userForm.controls['password'].touched
+              " onfocus="">
+              Password is required.
+            </div>
+<input type="text" id="acctid" placeholder="Click For Account_ID"  (click)="load()" formControlName="acctid"/><br><br>
+  <div class="alert alert-danger" *ngIf="  userForm.controls['acctid'].errors?.['required'] &&
+                userForm.controls['acctid'].touched
+              " onfocus="">
+              Account_Id is required.
+            </div>
+<input type="submit" id="submit"  value="Register"/>
+</form>

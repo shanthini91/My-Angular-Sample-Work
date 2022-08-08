@@ -1,0 +1,15 @@
+<nav>
+    <a class="button" routerLink="/balance" routerLinkActive="activebutton">View Balance</a> |
+	<div class="dropdown">
+    <button class="dropbtn">Transactions 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="button" routerLink="/deposite">Deposite</a>
+      <a class="button" routerLink="/withdraw">Withdraw</a>
+      <a class="button" routerLink="/transfer">Transfer</a>
+    </div>
+  </div> 
+    
+     <a class="buttonleft" routerLink="/home" routerLinkActive="activebutton" (click)="onLogout()">Logout</a>
+  </nav>

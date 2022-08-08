@@ -1,0 +1,24 @@
+<form [formGroup]="viewAcctForm">
+<p class="para">Get Account Logs</p>
+<input type="text" id="acctID" placeholder="Enter Account_Id"  formControlName="acctID"/><br><br><br>
+<div class="alert alert-danger" *ngIf="  viewAcctForm.controls['acctID'].errors?.['required'] &&
+            viewAcctForm.controls['acctID'].touched">ID is required.</div>
+<input type="button"  id="submit" (click)="onAcctInfo()" value="View Account Info"/><br><br><br>
+<table class="table table-striped  text-center" cellspacing="4" rules="all" border="4" id="myTable"
+        style="border-collapse: collapse; text-align: center; margin-left: auto; margin-right: auto; background-color:black;">
+        <thead>
+          <tr>
+            <th scope="col" style="color: white;">Account Id</th>
+            <th scope="col" style="color: white;">Status</th>
+			<th scope="col" style="color: white;">Balance</th>		
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+			<td style="color: white;">{{acctid}}</td>
+			<td style="color: white;">{{acctstatus}}</td>
+			<td style="color: white;">{{balance}}</td>			
+          </tr>
+        </tbody>
+      </table>
+</form>

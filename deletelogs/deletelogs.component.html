@@ -1,0 +1,8 @@
+<form [formGroup]="delLogsForm">
+<p class="para">Delete Logs Page</p>
+<input type="text" id="acctid" placeholder="Enter Account_Id"  formControlName="acctid"/><br><br>
+<div class="alert alert-danger" *ngIf="  delLogsForm.controls['acctid'].errors?.['required'] &&
+            delLogsForm.controls['acctid'].touched">ID is required.</div>
+
+<input type="button"  id="submit" (click)="onLogsDelete()" value="Delete"/>
+</form>

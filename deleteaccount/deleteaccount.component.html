@@ -1,0 +1,8 @@
+<form [formGroup]="delAcctForm">
+<p class="para">Delete Account Page</p>
+<input type="text" id="acctid" placeholder="Enter Account_Id"  formControlName="acctid"/><br><br>
+<div class="alert alert-danger" *ngIf="  delAcctForm.controls['acctid'].errors?.['required'] &&
+            delAcctForm.controls['acctid'].touched">ID is required.</div>
+
+<input type="button"  id="submit" (click)="onAcctDelete()" value="Delete"/>
+</form>

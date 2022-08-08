@@ -1,0 +1,17 @@
+<form [formGroup]="depositeForm">
+    <p class="para">Transfer Amount</p>
+    <input type="text" id="acctid" placeholder="Enter Account Id"  formControlName="acctid"/><br><br>
+     <div class="alert alert-danger" *ngIf="  depositeForm.controls['acctid'].errors?.['required'] &&
+                depositeForm.controls['acctid'].touched">
+              Account Id is required.
+            </div>
+    <input type="text" id="amount" placeholder="Enter Amount"  formControlName="amount"/><br><br>
+     <div class="alert alert-danger" *ngIf="  depositeForm.controls['amount'].errors?.['required'] &&
+                    depositeForm.controls['amount'].touched">
+                  Amount is required.
+                </div>
+    <input type="button" id="submit"  (click)="onDeposite()" value="Submit"/>
+    </form>
+	
+	
+	 

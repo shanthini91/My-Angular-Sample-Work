@@ -1,0 +1,17 @@
+<form [formGroup]="withdrawForm">
+    <p class="para">Transfer Amount</p>
+    <input type="text" id="acctid" placeholder="Enter Account Id"  formControlName="acctid"/><br><br>
+     <div class="alert alert-danger" *ngIf=" withdrawForm.controls['acctid'].errors?.['required'] &&
+                withdrawForm.controls['acctid'].touched">
+              Account Id is required.
+            </div>
+    <input type="text" id="amount" placeholder="Enter Amount"  formControlName="amount"/><br><br>
+     <div class="alert alert-danger" *ngIf="  withdrawForm.controls['amount'].errors?.['required'] &&
+                    withdrawForm.controls['amount'].touched">
+                  Amount is required.
+                </div>
+    <input type="button" id="submit" (click)="onWithdraw()" value="Submit"/>
+    </form>
+	
+	
+	 

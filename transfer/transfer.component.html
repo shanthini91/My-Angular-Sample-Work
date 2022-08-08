@@ -1,0 +1,22 @@
+<form [formGroup]="transferForm">
+    <p class="para">Transfer Amount</p>
+    <input type="text" id="acctID" placeholder="Enter Acctount Id"  formControlName="acctID"/><br><br>
+     <div class="alert alert-danger"  *ngIf=" transferForm.controls['acctID'].errors?.['required'] &&
+                transferForm.controls['acctID'].touched">
+              Account Id is required.
+            </div>
+    <input type="text" id="destAcctID" placeholder="Enter Destination Account Id"  formControlName="destAcctID"/><br><br>
+     <div class="alert alert-danger" *ngIf="  transferForm.controls['destAcctID'].errors?.['required'] &&
+                    transferForm.controls['destAcctID'].touched">
+                  Destination Account Id is required.
+                </div>
+				<input type="text" id="amount" placeholder="Enter Amount"  formControlName="amount"/><br><br>
+     <div class="alert alert-danger" *ngIf="  transferForm.controls['amount'].errors?.['required'] &&
+                    transferForm.controls['amount'].touched">
+                  Amount is required.
+                </div>
+    <input type="button" id="submit" (click)="onTransfer()" value="Submit"/>
+    </form>
+	
+	
+	 

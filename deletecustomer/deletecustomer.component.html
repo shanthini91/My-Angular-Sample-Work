@@ -1,0 +1,8 @@
+<form [formGroup]="delCustForm">
+<p class="para">Delete Customer Page</p>
+<input type="text" id="acctid" placeholder="Enter Account_Id"  formControlName="acctid"/><br><br>
+<div class="alert alert-danger" *ngIf="  delCustForm.controls['acctid'].errors?.['required'] &&
+            delCustForm.controls['acctid'].touched">ID is required.</div>
+
+<input type="button"  id="submit" (click)="onCustDelete()" value="Delete"/>
+</form>

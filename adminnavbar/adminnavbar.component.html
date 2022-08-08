@@ -1,0 +1,25 @@
+<nav>
+    <a class="button" routerLink="/list" routerLinkActive="activebutton">View Users</a> |
+    <a class="button" routerLink="/register" routerLinkActive="activebutton">Add Users</a> |
+	<div class="dropdown">
+    <button class="dropbtn">Account Details  
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="button" routerLink="/acctinfo">View Account Info</a>
+      <a class="button" routerLink="/logs">View Logs</a>
+      <a class="button" routerLink="/delacc">Delete Account</a>
+	  <a class="button" routerLink="/dellogs">Delete Logs</a>
+    </div>
+  </div> |
+  <div class="dropdown">
+    <button class="dropbtn">Customer Details  
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="button" routerLink="/custinfo">View Customer Info</a>
+      <a class="button" routerLink="/delcust">Delete Customer</a>
+    </div>
+  </div>   
+     <a class="buttonleft" routerLink="/home" routerLinkActive="activebutton" (click)="onLogout()">Logout</a>
+  </nav>
